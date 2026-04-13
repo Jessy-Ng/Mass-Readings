@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mass Readings — Alternative Texts Reference</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: #faf9f7; color: #1a1a1a; font-size: 13px; }
+  
+  header { background: #1a1a1a; color: #f5f0e8; padding: 28px 32px 24px; }
+  header h1 { font-size: 22px; font-weight: normal; letter-spacing: 0.03em; }
+  header p { font-size: 11px; color: #a09880; margin-top: 6px; font-family: Arial, sans-serif; letter-spacing: 0.04em; }
+
+  .legend { display: flex; gap: 20px; padding: 12px 32px; background: #f0ede8; border-bottom: 1px solid #ddd8cf; flex-wrap: wrap; }
+  .leg { display: flex; align-items: center; gap: 6px; font-size: 11px; font-family: Arial, sans-serif; color: #555; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: #5a8a5a; }
+  .dot-amber { background: #b87333; }
+  .dot-red   { background: #c0392b; }
+  .dot-blue  { background: #3a6a9a; }
+  .dot-gray  { background: #888; }
+
+  .scroll-wrap { overflow-x: auto; padding: 0 0 32px; }
+  table { width: 100%; min-width: 900px; border-collapse: collapse; }
+
+  thead th {
+    background: #2c2c2a;
+    color: #e8e4dc;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+  }
+
+  .group-header td {
+    background: #e8e3db;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #5a4e3c;
+    padding: 7px 12px;
+    border-top: 2px solid #c8c0b0;
+  }
+
+  tbody tr:not(.group-header) td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e8e3db;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  tbody tr:not(.group-header):hover td { background: #f5f1eb; }
+
+  td.feast-name { font-style: italic; font-size: 13px; color: #1a1a1a; min-width: 160px; }
+  td.feast-name .type-tag {
+    display: inline-block;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .tag-sol  { background: #d4a843; color: #5a3a00; }
+  .tag-feast{ background: #8ab4d4; color: #0d2e4a; }
+  .tag-mem  { background: #b8d4a8; color: #1a3a10; }
+  .tag-rit  { background: #d4a8b8; color: #4a1028; }
+  .tag-par  { background: #d0d0d0; color: #333; }
+
+  .pill {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+    margin: 1px 0;
+  }
+  .p-yes   { background: #d8ead8; color: #1e5c1e; border: 1px solid #b0d4b0; }
+  .p-no    { background: #ebebeb; color: #666; border: 1px solid #d0d0d0; }
+  .p-many  { background: #fde8c8; color: #7a3a00; border: 1px solid #f0c070; }
+  .p-na    { background: #f0f0f0; color: #999; border: 1px solid #ddd; font-style: italic; }
+
+  td.readings-col { font-size: 12px; color: #333; min-width: 180px; }
+  td.readings-col .ref { font-family: Arial, sans-serif; font-size: 11px; color: #555; }
+  td.readings-col .note { font-size: 10px; color: #888; font-family: Arial, sans-serif; margin-top: 2px; }
+
+  td.notes-col { font-family: Arial, sans-serif; font-size: 11px; color: #666; max-width: 240px; line-height: 1.5; }
+
+  .parish { color: #888; font-family: Arial, sans-serif; font-size: 11px; font-style: italic; }
+
+  footer { padding: 16px 32px; font-family: Arial, sans-serif; font-size: 10px; color: #999; border-top: 1px solid #e0dbd4; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mass Readings — Alternative Texts Reference</h1>
+  <p>Roman Catholic Ordinary Form · Based on the Lectionary for Mass (1998 USA Edition) · Compiled for liturgy planning</p>
+</header>
+
+<div class="legend">
+  <div class="leg"><div class="dot dot-green"></div> Has alternative texts / options within the year</div>
+  <div class="leg"><div class="dot dot-amber"></div> Readings vary by liturgical year (A/B/C)</div>
+  <div class="leg"><div class="dot dot-red"></div> Fixed readings — same every year, no alternatives</div>
+  <div class="leg"><div class="dot dot-blue"></div> Vigil Mass has own distinct readings</div>
+  <div class="leg"><div class="dot dot-gray"></div> Parish/pastoral — readings chosen by celebrant</div>
+</div>
+
+<div class="scroll-wrap">
+<table>
+<thead>
+  <tr>
+    <th style="width:17%">Feast / Celebration</th>
+    <th style="width:8%">Vigil Mass?</th>
+    <th style="width:9%">Readings change by Year A/B/C?</th>
+    <th style="width:9%">Alt. options within a year?</th>
+    <th style="width:22%">Standard Readings</th>
+    <th style="width:22%">Alternative Readings / Options</th>
+    <th style="width:13%">Notes</th>
+  </tr>
+</thead>
+<tbody>
+
+<!-- CHRISTMAS & EPIPHANY SEASON -->
+<tr class="group-header"><td colspan="7">Christmas &amp; Epiphany Season</td></tr>
+
+<tr>
+  <td class="feast-name">New Year's Day<br><em>Mary, Mother of God</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Num 6:22–27 · Ps 67 · Gal 4:4–7 · Luke 2:16–21</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Same readings every year. Jan 1 = Octave of Christmas.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Epiphany <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Isa 60:1–6 · Ps 72 · Eph 3:2–3a, 5–6 · Matt 2:1–12</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Same readings Years A/B/C. US: celebrated on Sunday between Jan 2–8.</td>
+</tr>
+
+<!-- ORDINARY TIME / EARLY YEAR -->
+<tr class="group-header"><td colspan="7">Ordinary Time — Feasts of the Lord</td></tr>
+
+<tr>
+  <td class="feast-name">Presentation of the Lord<br>(Blessing of Candles — Candlemas) <span class="type-tag tag-feast">Feast</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-yes">Yes — 2nd reading</span></td>
+  <td class="readings-col"><span class="ref">Mal 3:1–4 · Ps 24 · Heb 2:14–18 · Luke 2:22–40</span></td>
+  <td class="readings-col"><span class="ref">Alt 2nd reading: Heb 2:14–18 <em>or</em> Heb 2:14b–17</span><div class="note">Long or short form of Gospel also permitted</div></td>
+  <td class="notes-col">Feb 2. Procession with candles. Fixed readings every year.</td>
+</tr>
+
+<!-- PASTORAL MASSES -->
+<tr class="group-header"><td colspan="7">Parish / Pastoral Masses (readings chosen by celebrant)</td></tr>
+
+<tr>
+  <td class="feast-name">CNY Mass <span class="type-tag tag-par">Parish</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col">Weekday readings of the day, <em>or</em></td>
+  <td class="readings-col"><span class="ref">Masses for Various Needs &amp; Occasions (Vol. IV Lectionary) — e.g. "For the Nation" or "For a Happy Death" or Votive Mass of BVM</span></td>
+  <td class="notes-col">Not a universal feast. Celebrant selects from Ritual/Votive Masses or weekday readings.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Mass for Anointing of the Sick <span class="type-tag tag-rit">Ritual</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col"><span class="ref">Ritual Mass: "For the Sick" — multiple options provided in Lectionary Vol. IV</span></td>
+  <td class="readings-col"><span class="ref">E.g. 1st reading from Jas 5:13–16; Ps 102 or 27; Gospel from Matt 8 or Mark 6 (among others). Celebrant selects.</span></td>
+  <td class="notes-col">Proper Ritual Mass with broad reading choices. No single fixed set.</td>
+</tr>
+
+<!-- LENT -->
+<tr class="group-header"><td colspan="7">Lent &amp; Holy Week</td></tr>
+
+<tr>
+  <td class="feast-name">Ash Wednesday <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Joel 2:12–18 · Ps 51 · 2 Cor 5:20–6:2 · Matt 6:1–6, 16–18</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Same every year. Two readings before Gospel (rare for a weekday).</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Rite of Send-Off (Sending Out of Catechumens) <span class="type-tag tag-rit">Rite</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col">Readings of the Sunday on which it falls</td>
+  <td class="readings-col"><span class="ref">RCIA rite occurs within regular Sunday Mass; no separate lectionary set. Readings are those of the Sunday.</span></td>
+  <td class="notes-col">Rite of Christian Initiation; takes place during Sunday Mass. Not a separate feast.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">RCIA 1st Scrutiny <span class="type-tag tag-rit">Rite</span><br><em>(3rd Sunday of Lent)</em></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — A/B/C differ</span></td>
+  <td><span class="pill p-yes">Yes — Year A preferred</span></td>
+  <td class="readings-col"><span class="ref">Year A (preferred for scrutinies): Exod 17:3–7 · Ps 95 · Rom 5:1–2, 5–8 · John 4:5–42 (Samaritan Woman)</span></td>
+  <td class="readings-col"><span class="ref">Year B alt: Exod 20:1–17 · Ps 19 · 1 Cor 1:22–25 · John 2:13–25<br>Year C alt: Exod 3:1–8a, 13–15 · Ps 103 · 1 Cor 10:1–6, 10–12 · Luke 13:1–9<br><em>Year A readings may be used in any year when scrutinies are celebrated.</em></span></td>
+  <td class="notes-col">Lectionary explicitly allows Year A readings in B &amp; C when scrutinies are celebrated.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">RCIA 2nd Scrutiny <span class="type-tag tag-rit">Rite</span><br><em>(4th Sunday of Lent)</em></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — A/B/C differ</span></td>
+  <td><span class="pill p-yes">Yes — Year A preferred</span></td>
+  <td class="readings-col"><span class="ref">Year A (preferred): 1 Sam 16:1b, 6–7, 10–13a · Ps 23 · Eph 5:8–14 · John 9:1–41 (Man Born Blind)</span></td>
+  <td class="readings-col"><span class="ref">Year B alt: 2 Chr 36:14–16, 19–23 · Ps 137 · Eph 2:4–10 · John 3:14–21<br>Year C alt: Josh 5:9a, 10–12 · Ps 34 · 2 Cor 5:17–21 · Luke 15:1–3, 11–32<br><em>Year A readings may replace B/C when scrutinies are celebrated.</em></span></td>
+  <td class="notes-col">"Laetare Sunday" — rose vestments optional. Year A readings strongly recommended for parishes with elect.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">RCIA 3rd Scrutiny <span class="type-tag tag-rit">Rite</span><br><em>(5th Sunday of Lent)</em></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — A/B/C differ</span></td>
+  <td><span class="pill p-yes">Yes — Year A preferred</span></td>
+  <td class="readings-col"><span class="ref">Year A (preferred): Ezek 37:12–14 · Ps 130 · Rom 8:8–11 · John 11:1–45 (Raising of Lazarus)</span></td>
+  <td class="readings-col"><span class="ref">Year B alt: Jer 31:31–34 · Ps 51 · Heb 5:7–9 · John 12:20–33<br>Year C alt: Isa 43:16–21 · Ps 126 · Phil 3:8–14 · John 8:1–11<br><em>Year A preferred when elect are present.</em></span></td>
+  <td class="notes-col">Third and final scrutiny before Easter. Year A readings are normative for RCIA parishes.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Annunciation <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Isa 7:10–14; 8:10 · Ps 40 · Heb 10:4–10 · Luke 1:26–38</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Mar 25. Fixed readings. If it falls in Holy Week, transferred to after Easter Octave.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Lenten Penitential Service <span class="type-tag tag-par">Parish</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col">Not a Mass; Liturgy of the Word only</td>
+  <td class="readings-col"><span class="ref">Penitential liturgies draw from Rite of Penance Appendix II. Suggested texts include Isa 53; Ps 51; Luke 15; John 8, etc. Priest/deacon selects.</span></td>
+  <td class="notes-col">Communal Penance Service — not a Mass. No single prescribed set of readings.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Palm Sunday<br><em>(Passion Sunday)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — Gospel changes A/B/C</span></td>
+  <td><span class="pill p-yes">Yes — Procession Gospel</span></td>
+  <td class="readings-col"><span class="ref">Procession Gospel (changes each year):<br>A: Matt 21:1–11 · B: Mark 11:1–10 or John 12:12–16 · C: Luke 19:28–40<br>Fixed: Isa 50:4–7 · Ps 22 · Phil 2:6–11<br>Passion Gospel: A: Matt 26–27 · B: Mark 14–15 · C: Luke 22–23</span></td>
+  <td class="readings-col"><span class="ref">Passion Gospel: long or short form available each year.<br>Procession: in Year B, either Mark or John may be used.</span></td>
+  <td class="notes-col">Two distinct Gospel moments: Procession &amp; Passion. First reading and 2nd reading are fixed; Passion Gospel changes yearly.</td>
+</tr>
+
+<!-- TRIDUUM -->
+<tr class="group-header"><td colspan="7">Easter Triduum</td></tr>
+
+<tr>
+  <td class="feast-name">Maundy Thursday<br><em>(Mass of the Lord's Supper)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Exod 12:1–8, 11–14 · Ps 116 · 1 Cor 11:23–26 · John 13:1–15</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Evening Mass only (not morning). Begins the Triduum. Fixed readings every year.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Good Friday<br><em>(Liturgy of the Lord's Passion)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-yes">Yes — Passion long/short form</span></td>
+  <td class="readings-col"><span class="ref">Isa 52:13–53:12 · Ps 31 · Heb 4:14–16; 5:7–9 · John 18:1–19:42</span></td>
+  <td class="readings-col"><span class="ref">Passion (John 18–19): long form or short form (John 18:1–19:30 only) permitted.</span></td>
+  <td class="notes-col">Not a Mass — Liturgy of the Word + Veneration of the Cross + Communion. No Eucharistic Prayer. Fixed readings.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Easter Vigil <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No (is itself the vigil)</span></td>
+  <td><span class="pill p-yes">Yes — Gospel changes A/B/C</span></td>
+  <td><span class="pill p-many">Yes — OT readings (min. 3 of 7)</span></td>
+  <td class="readings-col"><span class="ref">7 OT readings (at least 3 required, all 7 recommended):<br>Gen 1; Gen 22; Exod 14; Isa 54; Isa 55; Bar 3; Ezek 36<br>NT: Rom 6:3–11 · Ps 118 · Gospel: A: Matt 28:1–10 · B: Mark 16:1–7 · C: Luke 24:1–12</span></td>
+  <td class="readings-col"><span class="ref">Parishes may choose which OT readings to include (minimum 3, always including Exod 14). Responsorial psalms are prescribed for each OT reading used.</span></td>
+  <td class="notes-col">Most readings of any liturgy in the year. OT readings are flexible within prescribed set. Gospel varies by year.</td>
+</tr>
+
+<!-- EASTER SEASON -->
+<tr class="group-header"><td colspan="7">Easter Season</td></tr>
+
+<tr>
+  <td class="feast-name">Divine Mercy Sunday<br><em>(2nd Sunday of Easter)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — 1st reading &amp; 2nd reading change</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">A: Acts 2:42–47 · Ps 118 · 1 Pet 1:3–9 · John 20:19–31<br>B: Acts 4:32–35 · Ps 118 · 1 John 5:1–6 · John 20:19–31<br>C: Acts 5:12–16 · Ps 118 · Rev 1:9–11a, 12–13, 17–19 · John 20:19–31</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Gospel (John 20:19–31) is fixed every year. First and second readings change by year A/B/C.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Ascension Sunset / Vigil <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes — proper vigil</span></td>
+  <td><span class="pill p-yes">Yes — Gospel changes A/B/C</span></td>
+  <td><span class="pill p-yes">Yes — 2nd reading in B &amp; C</span></td>
+  <td class="readings-col"><span class="ref">Vigil Mass (evening before): Acts 1:1–11 · Ps 47 · Eph 1:17–23 (Year A)<br>Gospel: A: Matt 28:16–20 · B: Mark 16:15–20 · C: Luke 24:46–53</span></td>
+  <td class="readings-col"><span class="ref">Year B: 2nd reading Eph 4:1–13 <em>or</em> Eph 4:1–7, 11–13<br>Year C: 2nd reading Heb 9:24–28; 10:19–23</span></td>
+  <td class="notes-col">The Vigil Mass (sunset/evening Mass) has its own proper set of readings distinct from the Mass during the Day.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Ascension (Day Mass) <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes</span></td>
+  <td><span class="pill p-yes">Yes — Gospel changes A/B/C</span></td>
+  <td><span class="pill p-yes">Yes — 2nd reading in B &amp; C</span></td>
+  <td class="readings-col"><span class="ref">Acts 1:1–11 · Ps 47 · Eph 1:17–23 (Year A) · Matt 28:16–20 (Yr A)</span><div class="note">Year B: Mark 16:15–20 · Year C: Luke 24:46–53</div></td>
+  <td class="readings-col"><span class="ref">Year B: 2nd reading Eph 4:1–13 <em>or</em> Eph 4:1–7, 11–13<br>Year C: 2nd reading Heb 9:24–28; 10:19–23</span></td>
+  <td class="notes-col">US: celebrated on 7th Sunday of Easter in most dioceses. First reading fixed; Gospel &amp; 2nd reading vary.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Pentecost <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes — extended vigil</span></td>
+  <td><span class="pill p-yes">Yes — 2nd reading &amp; Gospel in B &amp; C</span></td>
+  <td><span class="pill p-many">Yes — Vigil: 4 OT options</span></td>
+  <td class="readings-col"><span class="ref">Vigil (any one of 4 OT readings): Gen 11:1–9 <em>or</em> Exod 19:3–8, 16–20 <em>or</em> Ezek 37:1–14 <em>or</em> Joel 3:1–5<br>Day Mass: Acts 2:1–11 · Ps 104 · 1 Cor 12:3b–7, 12–13 (Yr A) · John 20:19–23 (Yr A)</span></td>
+  <td class="readings-col"><span class="ref">Year B: 2nd reading Gal 5:16–25 (alt.); Gospel John 15:26–27; 16:12–15 (alt.)<br>Year C: 2nd reading Rom 8:8–17 (alt.); Gospel John 14:15–16, 23b–26 (alt.)<br>Sequence <em>Veni Sancte Spiritus</em> is obligatory.</span></td>
+  <td class="notes-col">Richest set of alternatives of any feast. Vigil has 4 interchangeable OT readings; Day Mass has year-specific alternatives in B &amp; C.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Trinity Sunday <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — all 3 readings change</span></td>
+  <td><span class="pill p-no">No alternatives within a year</span></td>
+  <td class="readings-col"><span class="ref">A: Exod 34:4b–6, 8–9 · Dan 3:52–55 · 2 Cor 13:11–13 · John 3:16–18<br>B: Deut 4:32–34, 39–40 · Ps 33 · Rom 8:14–17 · Matt 28:16–20<br>C: Prov 8:22–31 · Ps 8 · Rom 5:1–5 · John 16:12–15</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">All three readings differ completely by year. No within-year alternatives.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Corpus Christi<br><em>(Body &amp; Blood of Christ)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — all 3 readings change</span></td>
+  <td><span class="pill p-yes">Yes — Sequence optional</span></td>
+  <td class="readings-col"><span class="ref">A: Deut 8:2–3, 14b–16a · Ps 147 · 1 Cor 10:16–17 · John 6:51–58<br>B: Exod 24:3–8 · Ps 116 · Heb 9:11–15 · Mark 14:12–16, 22–26<br>C: Gen 14:18–20 · Ps 110 · 1 Cor 11:23–26 · Luke 9:11b–17</span></td>
+  <td class="readings-col"><span class="ref">Sequence <em>Lauda Sion</em>: optional (may be omitted). All readings otherwise fixed within each year.</span></td>
+  <td class="notes-col">US: celebrated on Sunday after Trinity Sunday. All readings vary by year; no within-year reading alternatives.</td>
+</tr>
+
+<!-- TRIDUUM LABELS -->
+<tr class="group-header"><td colspan="7">Triduum Day Labels (as listed in your calendar)</td></tr>
+
+<tr>
+  <td class="feast-name">Triduum Day 1<br><em>(Holy Thursday)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td colspan="6" style="font-family:Arial,sans-serif;font-size:11px;color:#666;padding:8px 12px;">Same as <em>Maundy Thursday</em> above. Fixed readings: Exod 12 · Ps 116 · 1 Cor 11:23–26 · John 13:1–15</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Triduum Day 2<br><em>(Good Friday)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td colspan="6" style="font-family:Arial,sans-serif;font-size:11px;color:#666;padding:8px 12px;">Same as <em>Good Friday</em> above. Fixed: Isa 52–53 · Ps 31 · Heb 4–5 · John 18–19 (long or short form).</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Triduum Day 3<br><em>(Easter Vigil)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td colspan="6" style="font-family:Arial,sans-serif;font-size:11px;color:#666;padding:8px 12px;">Same as <em>Easter Vigil</em> above. 7 OT readings (min. 3) + Rom 6 + Ps 118 + Gospel (varies A/B/C).</td>
+</tr>
+
+<!-- ORDINARY TIME FEASTS -->
+<tr class="group-header"><td colspan="7">Ordinary Time — Major Feasts</td></tr>
+
+<tr>
+  <td class="feast-name">Transfiguration of the Lord<br><em>("Feast Day")</em> <span class="type-tag tag-feast">Feast</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-yes">Yes — Gospel changes A/B/C</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Dan 7:9–10, 13–14 · Ps 97 · 2 Pet 1:16–19<br>Gospel: A: Matt 17:1–9 · B: Mark 9:2–10 · C: Luke 9:28b–36</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Aug 6. Listed as "Feast Day" in your calendar. First two readings fixed every year; Gospel varies by A/B/C.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Assumption Sunset / Vigil <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes — proper vigil</span></td>
+  <td><span class="pill p-no">No — vigil fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Vigil: 1 Chr 15:3–4, 15–16; 16:1–2 · Ps 132 · 1 Cor 15:54b–57 · Luke 11:27–28</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Aug 14 evening. Proper vigil with its own distinct readings (different from Day Mass).</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Assumption (Day Mass) <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Rev 11:19a; 12:1–6a, 10ab · Ps 45 · 1 Cor 15:20–27 · Luke 1:39–56</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Aug 15. Fixed readings every year. Holy Day of Obligation.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Mission Sunday <span class="type-tag tag-par">Parish</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col">Readings of the Sunday (World Mission Sunday = second-last Sunday of October)</td>
+  <td class="readings-col"><span class="ref">Celebrant may supplement with readings from Masses for Various Needs: "For the Spread of the Gospel" or "For Missionaries." Sunday readings take precedence.</span></td>
+  <td class="notes-col">World Mission Sunday is the second-last Sunday of October (e.g. Oct 18, 2026). The Sunday readings of the liturgical year apply; no separate lectionary set.</td>
+</tr>
+
+<!-- NOVEMBER FEASTS -->
+<tr class="group-header"><td colspan="7">November — Solemnities of All Saints &amp; All Souls</td></tr>
+
+<tr>
+  <td class="feast-name">All Saints Sunset / Vigil <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">No distinct vigil readings are prescribed in the standard Lectionary for All Saints. The evening Mass of Nov 1 uses the Day Mass readings.</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Nov 1 evening. Unlike Assumption or Ascension, All Saints has no separate vigil Mass set; Day Mass readings are used throughout.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">All Saints (Day) <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Rev 7:2–4, 9–14 · Ps 24 · 1 John 3:1–3 · Matt 5:1–12a</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">Nov 1. Same readings every year. Holy Day of Obligation.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">All Souls <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td><span class="pill p-no">No fixed cycle</span></td>
+  <td><span class="pill p-many">Many options — all readings</span></td>
+  <td class="readings-col"><span class="ref">From Masses for the Dead (Lectionary #668 onward). Many readings provided for each position. Examples: Wis 3:1–9 or Job 19; Ps 23 or Ps 27 or Ps 130; Rom 5:5–11 or Rom 6:3–9 or 1 Cor 15; John 5:25–29 or John 6:37–40 or John 11:17–27, etc.</span></td>
+  <td class="readings-col"><span class="ref">All Souls is the <em>only</em> Mass in the year where options exist for every reading. Priests may celebrate up to three Masses, each with different readings.</span></td>
+  <td class="notes-col">Nov 2. Broadest reading flexibility of any day in the liturgical year. Lectionary gives extensive options for all three readings.</td>
+</tr>
+
+<!-- ADVENT & CHRISTMAS -->
+<tr class="group-header"><td colspan="7">Advent &amp; Christmas</td></tr>
+
+<tr>
+  <td class="feast-name">Advent Penitential Service <span class="type-tag tag-par">Parish</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col">Not a Mass — Liturgy of the Word for communal penance</td>
+  <td class="readings-col"><span class="ref">Rite of Penance Appendix II suggests texts such as Isa 1 or Isa 55; Ps 51 or Ps 130; Rom 13; Luke 3 or Luke 15, etc. Priest selects.</span></td>
+  <td class="notes-col">Same structure as Lenten Penitential Service. No prescribed reading set; celebrant chooses.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Christmas Midnight Mass <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-no">No (is its own Mass)</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-no">No</span></td>
+  <td class="readings-col"><span class="ref">Isa 9:1–6 · Ps 96 · Titus 2:11–14 · Luke 2:1–14</span></td>
+  <td class="readings-col">—</td>
+  <td class="notes-col">"Mass during the Night." Fixed readings every year A/B/C.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Christmas Evening / Sunset<br><em>(Vigil Mass)</em> <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes — is the Vigil</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-yes">Yes — short Gospel form</span></td>
+  <td class="readings-col"><span class="ref">Isa 62:1–5 · Ps 89:4–5, 16–17, 27, 29 · Acts 13:16–17, 22–25 · Matt 1:1–25</span></td>
+  <td class="readings-col"><span class="ref">Gospel: long form Matt 1:1–25 <em>or</em> short form Matt 1:18–25. Vigil readings may also be used at any Christmas Day Mass per pastoral need.</span></td>
+  <td class="notes-col">Dec 24 evening. The Vigil Mass has its own proper set of readings, distinct from the three Masses of Christmas Day. Fixed every year.</td>
+</tr>
+
+<tr>
+  <td class="feast-name">Christmas (Day Mass) <span class="type-tag tag-sol">Sol.</span></td>
+  <td><span class="pill p-yes">Yes — Vigil Mass</span></td>
+  <td><span class="pill p-no">No — fixed</span></td>
+  <td><span class="pill p-yes">Yes — 4 distinct Mass sets</span></td>
+  <td class="readings-col"><span class="ref">Mass during the Day: Isa 52:7–10 · Ps 98 · Heb 1:1–6 · John 1:1–18</span><div class="note">Gospel: long form John 1:1–18 <em>or</em> short form John 1:1–5, 9–14</div></td>
+  <td class="readings-col"><span class="ref">4 Mass sets, all fixed (no A/B/C variation):<br>1) Vigil: Isa 62:1–5 · Acts 13 · Matt 1:1–25 (or 1:18–25)<br>2) Midnight: Isa 9 · Titus 2 · Luke 2:1–14<br>3) Dawn: Isa 62:11–12 · Titus 3 · Luke 2:15–20<br>4) Day: Isa 52 · Heb 1 · John 1:1–18 or 1:1–5, 9–14</span></td>
+  <td class="notes-col">Dec 25. One of only four feasts with four distinct Mass texts. Each Mass has fixed readings; no year-A/B/C variation.</td>
+</tr>
+
+<!-- SACRAMENTAL MASSES -->
+<tr class="group-header"><td colspan="7">Sacramental / Special Occasion Masses</td></tr>
+
+<tr>
+  <td class="feast-name">Confirmation Mass <span class="type-tag tag-rit">Ritual</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-na">N/A</span></td>
+  <td><span class="pill p-many">Many options</span></td>
+  <td class="readings-col"><span class="ref">Ritual Mass "For the Conferral of Confirmation" — Lectionary Vol. IV. If on a Sunday outside Lent/Easter, Sunday readings take precedence but Confirmation proper readings may be used on weekdays.</span></td>
+  <td class="readings-col"><span class="ref">Suggested readings include: Acts 8:14–17 or Acts 19:1–6; Ps 104; Rom 8:14–17 or Eph 1:3–7; John 14:15–17 or John 16:12–15 (among others). Bishop/priest selects.</span></td>
+  <td class="notes-col">Sept 5, 4pm (your calendar). Ritual Mass with broad options. If it falls on a Sunday, the Bishop may ask to use the Ritual Mass readings as an exception.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<footer>
+  Sources: Roman Catholic Lectionary for Mass, 1998 USA Edition (Ordinary Form) · Ordo Lectionum Missae, 2nd edition (1981) · RCIA / Rite of Christian Initiation of Adults · Rite of Penance · General Instruction of the Roman Missal (3rd ed.) · Compiled for parish liturgy planning purposes. Always verify with your diocesan ordo.
+</footer>
+
+</body>
+</html>
